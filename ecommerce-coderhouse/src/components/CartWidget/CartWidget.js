@@ -5,6 +5,7 @@ const CartWidget = () => {
   return (
     <div className="cartwidgetmain-container">
       <ShoppingCart />
+     
       <div className="badge">2</div>
     </div>
   )
