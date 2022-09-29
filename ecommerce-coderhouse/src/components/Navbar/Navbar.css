@@ -1,0 +1,25 @@
+.navbarmain-container {
+  border: 1px solid red;
+}
+
+.logo-container img {
+    width: 300px;
+}
+  
+nav {
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.cart-widget {
+  justify-content: flex end;
+}
+
+nav a {
+  padding: 15px;
+  text-decoration: none;
+}
