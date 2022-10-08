@@ -1,3 +1,4 @@
+import React from 'react';
 import './Navbar.css';
 import logo from "./assets/img/logo.png";
 import CartWidget from '../CartWidget/CartWidget'
