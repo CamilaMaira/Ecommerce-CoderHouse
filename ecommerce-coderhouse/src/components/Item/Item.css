@@ -1,0 +1,26 @@
+.itemcard-maincontainer{
+  border: 1px solid pink;
+}
+
+.price{
+  font-size: 12px;
+  margin-bottom: 50px;
+}
+
+.item-img{
+  width: 350px;
+}
+
+.detail-button{
+  padding: 6px 50px 6px 50px;
+  font-weight: 500;
+  border: 1px solid black;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+}
+
+.detail-button:hover{
+  background-color: black;
+  color: white;
+}

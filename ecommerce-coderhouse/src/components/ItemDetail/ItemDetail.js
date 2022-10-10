@@ -1,12 +1,18 @@
 import React from "react"
+import './ItemDetail.css'
+
 //componente de visualización
-const ItemDetail = ({id, name, price, img, stock, description }) => {
+const ItemDetail = ({id, name, price, img, description }) => {
   return (
-    <div>
-        <img scr={img} alt="" style={{width: 150, height: 150}}/>
-        <h3>{name}</h3>
-        <p>Precio: {price}</p>
-        <p>Detalle: {description}</p>
+    <div  className="itemdetail-container">
+        <picture>
+          <img className="itemdetail-img "scr={img} alt=""/>
+        </picture>
+        <div className="content">
+          <h3 className="itemdetail-title">{name}</h3>
+          <p className="itemdetail-detail">{description}</p>
+          <p className="itemdetail-price">Precio: {price}</p>
+        </div>
 
     </div>
   )

@@ -1,0 +1,31 @@
+.itemdetail-container {
+  display: flex;
+}
+
+.content {
+  margin-left: 30px;
+  text-align: left;
+}
+
+.itemdetail-title {
+  margin-top: 50px;
+  font-size: 36px;
+}
+
+.itemdetail-img {
+  width: 600px;
+  height: 400px;
+}
+
+.itemdetail-detail {
+  margin-top: 50px;
+  font-size: 14px;
+
+}
+
+
+
+.itemdetail-price {
+  font-size: 12px;
+  text-align: left;
+}

@@ -1,35 +1,39 @@
 const products =  [
   { 
       id: '1', 
-      name: 'iphone 12', 
-      price: 1000, 
-      category: 'celular', 
-      img:'https://itechstore.com.ar/wp-content/uploads/2020/06/iphone-12-pro-gold-hero-600x710.png', 
+      name: 'Feminizine #1', 
+      price: 3500, 
+      category: 'Fanzines', 
+      img:'https://www.rayitasazules.com/wp-content/uploads/2018/02/Siete-fanzines-a-los-que-no-perderles-la-pista.jpg', 
       // img: '/images/nombredeimagen.jpg',
       stock: 25, 
-      description:'Descripcion de Iphone 12'
+      description:'FEMINIZINE es una publicación realizada durante los años 2012 al 2014 y editada por Bombas para Desayunar. Su principal objetivo fue dar difusión al trabajo realizado por mujeres desde el feminismo y la cultura alternativa. '
   },
 
   { id: '2', 
-    name: 'samsung s21', 
+    name: '¿Cómo vivir de ahora en adelante?', 
     price: 800, 
     category: 'celular', 
-    img:'https://cdn.pocket-lint.com/r/s/1200x630/assets/images/155378-phones-review-hands-on-samsung-galaxy-s21-ultra-image1-luae09ici4.JPG', stock: 16, description:'Descripcion de Samsung s21'
+    img:'https://hambrehambrehambre.com/wp-content/uploads/2022/08/comovivirdeahoraenadelante.jpg', 
+    stock: 16, 
+    description:'Publicación que compila las cartas entre la artista visual chilena Paz Ortúzar y 11 mujeres y disidencias con prácticas creativas en medio de la pandemia de Covid-19.'
   },
 
-  { 
+  {
     id: '3', 
-    name: 'Ipad 8va generacion', 
+    name: 'Odio a las fachas',
     price: 1200, 
     category: 'tablet', 
-    img:'https://medias.musimundo.com/medias/00406046-143516-143516-01-143516-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w1MjI1MnxpbWFnZS9qcGVnfGhjMC9oYWMvMTAyODM0OTc0NTU2NDYvMDA0MDYwNDYtMTQzNTE2LTE0MzUxNl8wMS0xNDM1MTZfMDEuanBnX3NpemU1MTV8MzA0NmMzNGFhZjUwMDY2YjY5MjU0MjlkMGJlYWMxODAxZjE5ODJhZmJlOTczZThmZjE2NTQxMjU5NjE2OTA4Yw', stock: 10, description:'Descripcion de Ipad'}
+    img:'https://1.bp.blogspot.com/-Ty_ZZoUFzIg/XylamXjHNCI/AAAAAAAABxE/bRWZMHFxascVtiR69IvGZYHDyjPWInNgwCLcBGAsYHQ/s2048/portadafachas_color.jpg', 
+    stock: 10, 
+    description:'Odio a los fachas, poemario.'}
 ]
 
 export const getProducts = () => {
   return new Promise((resolve) => {
       setTimeout(() => {
           resolve(products)
-      }, 500)
+      }, 700)
   })
 }
 
@@ -39,7 +43,7 @@ export const getProductById = (id) => {
       resolve(products.find(prod => {
         return prod.id === id
       }))
-    }, 500)
+    }, 700)
   })
 }
 
@@ -47,6 +51,6 @@ export const getProductByCategory = (categoryId) => {
   return new Promise (resolve => {
     setTimeout(() => {
       resolve(products.filter(prod => prod.category === categoryId))
-    }, 500)
+    }, 700)
   })
 }

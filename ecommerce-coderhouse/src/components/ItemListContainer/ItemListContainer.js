@@ -1,34 +1,47 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { getProducts } from '../../asyncMock';
+import { getProducts, getProductByCategory } from '../../asyncMock';
+import { useParams } from 'react-router-dom';
+import ItemList from '../ItemList/ItemList';
+import { Skeleton } from '@mui/material';
 
 import './ItemListContainer.css';
 
-
+//CATEGORÍAS
 const ItemListContainer = () => {
   //parte como un array vacio
   const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(true)
 
-  useEffect (() => {
-    getProducts()
-      .then(products => {
-        //lo guardo en el estado
-        setProducts(products)
-      })
-  }, [])
+  const { categoryId } = useParams()
+
+  useEffect(() => {
+    setLoading(true)
+
+    const asyncFunction = categoryId ? getProductByCategory : getProducts
+    asyncFunction(categoryId).then(response => {
+        setProducts(response)
+    }).catch(error => {
+        console.log(error)
+    }).finally(() => {
+        setLoading(false)
+    })  
+}, [categoryId])
+
+  if(loading){
+    return (
+      <div>
+        <Skeleton variant="text" sx={{ fontSize: '2rem' }} />
+        <Skeleton variant="circular" width={40} height={40} />
+        <Skeleton variant="rectangular" width={210} height={60} />
+        <Skeleton variant="rounded" width={210} height={60} />
+      </div>
+    )
+  }
 
   return (
-    <div>
-      <h2>Lista de Productos</h2>
-      {products.map((prod) => {
-        return (
-          <div key={prod.id}>
-            <img scr={prod.img} alt="" style={{width: 150, height: 150}}/>
-            <h3>{prod.name}</h3>
-            <p>Precio: {prod.price}</p>
-          </div>
-        )
-      })}
+    <div className="itemlist-maincontainer">
+      <ItemList products={products} />
     </div>
   )
 }
