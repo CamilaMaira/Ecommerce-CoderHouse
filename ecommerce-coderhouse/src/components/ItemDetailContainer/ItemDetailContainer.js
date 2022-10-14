@@ -22,9 +22,7 @@ const ItemDetailContainer = () => {
   return (
     //tengo que recibir un objeto
     <div>
-      <h2>Detalle de producto</h2>
       <ItemDetail {...product}/>
-      <button onClick={() => navigate(`/`)}>Volver</button>
     </div>
   )
 }

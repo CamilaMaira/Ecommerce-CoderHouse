@@ -8,9 +8,10 @@ const Item = ({id, name, img, price }) => {
           <picture>
             <img src={img} alt={name} className="item-img"/>
           </picture>
-          <h2>{name}</h2>          
+          <h2 className='title'>{name}</h2>          
           <p className="price">${price} CLP</p>
           <Link className="detail-button" to={`/detail/${id}`}>Ver detalle</Link> 
+
         </div> 
         )
 }

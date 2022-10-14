@@ -3,29 +3,63 @@
 }
 
 .content {
-  margin-left: 30px;
+  width: 60%;
   text-align: left;
+  padding-left: 50px;
 }
 
 .itemdetail-title {
   margin-top: 50px;
   font-size: 36px;
+  margin-right: 50px;
 }
 
 .itemdetail-img {
-  width: 600px;
-  height: 400px;
+  margin-left: 50px;
+  width: 300px;
+
 }
 
 .itemdetail-detail {
   margin-top: 50px;
   font-size: 14px;
+  margin-right: 50px;
 
 }
-
-
 
 .itemdetail-price {
   font-size: 12px;
   text-align: left;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.add-button{
+  padding: 6px 50px 6px 50px;
+  font-weight: 500;
+  border: 1px solid black;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  background-color: white;
+}
+
+.add-button:hover{
+  background-color: black;
+  color: white;
+}
+
+.volver-button{
+  font-size: 12px;
+  font-weight: 500;
+  background: none;
+  text-decoration: underline;
+  border: 0;
+  color: black !important;
+  cursor: pointer;
+}
+
+.volver-button:hover{
+  font-weight: bold;
 }

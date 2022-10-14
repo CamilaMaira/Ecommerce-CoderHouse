@@ -1,14 +1,24 @@
 .itemcard-maincontainer{
-  border: 1px solid pink;
+  margin: 5px;
+  height: 30rem;
+  width: 21rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.title{
+  margin-top: 10px;
 }
 
 .price{
   font-size: 12px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .item-img{
-  width: 350px;
+  margin-top: 5px;
+  width: 13rem;
 }
 
 .detail-button{
@@ -18,6 +28,8 @@
   font-size: 14px;
   text-decoration: none;
   color: black;
+  text-align: center;
+  margin: 20px;
 }
 
 .detail-button:hover{

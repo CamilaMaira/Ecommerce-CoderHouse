@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { getProducts, getProductByCategory } from '../../asyncMock';
 import { useParams } from 'react-router-dom';
 import ItemList from '../ItemList/ItemList';
-import { Skeleton } from '@mui/material';
+import SkeletonItem from '../Skeleton/Skeleton';
 
 import './ItemListContainer.css';
 
@@ -30,11 +30,10 @@ const ItemListContainer = () => {
 
   if(loading){
     return (
-      <div>
-        <Skeleton variant="text" sx={{ fontSize: '2rem' }} />
-        <Skeleton variant="circular" width={40} height={40} />
-        <Skeleton variant="rectangular" width={210} height={60} />
-        <Skeleton variant="rounded" width={210} height={60} />
+      <div className='skeleton'>
+        <SkeletonItem />
+        <SkeletonItem />
+        <SkeletonItem />
       </div>
     )
   }

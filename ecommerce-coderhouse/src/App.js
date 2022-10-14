@@ -10,7 +10,8 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />     
+        <Navbar />   
+       
         <Routes>
         <Route path='/' element={<ItemListContainer />} />
           <Route path='/shop' element={<ItemListContainer />} />
@@ -18,6 +19,7 @@ function App() {
           <Route path='/detail/:productId' element={<ItemDetailContainer />} />
         </Routes>
       </BrowserRouter> 
+     
     </div>
   );
 }

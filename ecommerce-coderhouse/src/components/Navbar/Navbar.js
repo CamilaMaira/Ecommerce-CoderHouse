@@ -3,6 +3,7 @@ import './Navbar.css';
 import logo from "./assets/img/logo.png";
 import CartWidget from '../CartWidget/CartWidget'
 import { Link } from 'react-router-dom'
+import { Menu, MenuList, MenuItem} from '@mui/material';
 
 const Navbar = () => {
   return (
@@ -16,15 +17,12 @@ const Navbar = () => {
           <div>
             <Link to ='/'>Inicio </Link>
             <Link to ='/'>Nosotres</Link>
-            <Link to={'/category/tablet'}>
-            <button>Tablet</button>
-            </Link>
-            <Link to ='/'>Shop</Link>
+            <Link to={'/category/fanzines'}>Fanzines</Link>
+            <Link to={'/category/libros'}>Libros</Link>
             <Link to ='/'>Contacto</Link>
           </div>
             <CartWidget className="cart-widget" />
-      </nav>
-     
+      </nav>         
     </div>
   )
 }
