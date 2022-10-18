@@ -1,19 +1,23 @@
 import React from 'react';
 import './CartWidget.css';
 import ShoppingCart from '@mui/icons-material/ShoppingCartOutlined'
-import { useState } from 'react';
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
 
 const CartWidget = () => {
 
-  const [contador, setContador] = useState(0);
+  const { totalQuantity } = useContext(CartContext)
+  //const quantity = getQuantity()
 
   return (
     <div className="cartwidgetmain-container">
-      <ShoppingCart onClick={() => setContador(contador + 1)}/>
-      <div className="badge">{contador}</div>
+      <ShoppingCart />
+      <div className="badge">
+        <p>{totalQuantity}</p>
+      </div>
     </div>
-  )
+  );
 }
 
-export default CartWidget;
+export default CartWidget
 

@@ -28,6 +28,8 @@ const ItemListContainer = () => {
     })  
 }, [categoryId])
 
+
+
   if(loading){
     return (
       <div className='skeleton'>
