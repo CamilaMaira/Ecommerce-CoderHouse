@@ -1,5 +1,5 @@
-import React, { useContext } from "react"
-import { useNavigate } from "react-router-dom"
+import { useContext } from "react"
+import { useNavigate, Link } from "react-router-dom"
 import ItemCount from "../ItemCount/ItemCount"
 import { CartContext } from "../../context/CartContext"
 import './ItemDetail.css'
@@ -7,7 +7,7 @@ import './ItemDetail.css'
 //componente de visualización
 const ItemDetail = ({id, name, price, img, description, stock }) => {
 
-  const { addItem } = useContext(CartContext)
+  const { addItem, isInCart } = useContext(CartContext)
   const navigate = useNavigate()
 
   const handleOnAdd = (quantity) => { 
@@ -30,9 +30,14 @@ const ItemDetail = ({id, name, price, img, description, stock }) => {
           <p className="itemdetail-detail">{description}</p>
           <p className="itemdetail-price">${price}CLP</p>
 
-         <footer>
-          <ItemCount onAdd={handleOnAdd} stock={stock}/>
-          </footer>
+         <div>
+          {
+            !isInCart(id)
+            ? <ItemCount onAdd={handleOnAdd} stock={stock}/>
+            : <Link to='/cart'>Finalizar Compra</Link>
+          }
+          
+          </div>
         </div>
     </div>
   )
