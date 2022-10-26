@@ -9,7 +9,7 @@ const products =  [
       category: 'fanzines', 
       //img:'https://www.rayitasazules.com/wp-content/uploads/2018/02/Siete-fanzines-a-los-que-no-perderles-la-pista.jpg', 
        img: feminizineImg,
-      stock: 25, 
+      stock: 20, 
       description:'Feminizine #1 es una publicación realizada durante los años 2012 al 2014 y editada por Bombas para Desayunar. Su principal objetivo fue dar difusión al trabajo realizado por mujeres desde el feminismo y la cultura alternativa. '
   },
 

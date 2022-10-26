@@ -1,13 +1,13 @@
 import React from 'react'
 import { useState } from 'react'
 
-const ItemCount = ({stock = 0, initial = 1, onAdd}) => {
+const ItemCount = ({stock = 0, initial = 1, onAdd }) => {
 
   const [quantity, setQuantity] = useState(initial)
 
   const increment = () => {
-    for (var i = 0; i < 5; i++) {
-      setQuantity(valorPrev => valorPrev + 1 )
+    if(quantity < stock) {
+      setQuantity(quantity + 1)
     }
   }
 
@@ -24,7 +24,10 @@ const ItemCount = ({stock = 0, initial = 1, onAdd}) => {
         <button onClick={increment}>Más</button>
       </div>
       <div>
-        <button onClick={() => onAdd(quantity)}>Agregar al Carrito</button>
+        { quantity > 0 
+      ? <button className="Button" onClick={() => onAdd(quantity)}>Agregar al carrito</button>
+          : <p>TT</p>
+          }
       </div>
     </div>
   )
