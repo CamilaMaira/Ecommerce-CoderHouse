@@ -7,14 +7,14 @@ import { Link } from 'react-router-dom';
 
 const CartWidget = () => {
 
-  const { getQuantity } = useContext(CartContext)
+  const { totalQuantity } = useContext(CartContext)
 
   return (
     <div className="cartwidgetmain-container">
        <Link to='/cart'>
         <ShoppingCart />
           <div className="badge">
-            <p>{getQuantity()}</p>
+            <p>{totalQuantity}</p>
           </div>
       </Link>
     </div>
