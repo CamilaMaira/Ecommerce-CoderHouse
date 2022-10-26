@@ -11,14 +11,16 @@ const ItemDetail = ({id, name, price, img, description, stock }) => {
   const navigate = useNavigate()
 
   const handleOnAdd = (quantity) => { 
-    const productToAdd = { 
-      id, 
-      name, 
-      price, 
-      quantity }   
  
-      addItem(productToAdd, quantity)
-    }
+     const productToAdd = { 
+       id, 
+       name, 
+       price, 
+       quantity 
+      }   
+ 
+       addItem(productToAdd, quantity)
+     }
 
   return (
     <div  className="itemdetail-container">
@@ -31,12 +33,12 @@ const ItemDetail = ({id, name, price, img, description, stock }) => {
           <p className="itemdetail-price">${price}CLP</p>
 
          <div>
-          {
-            !isInCart(id)
+          {/* {
+            isInCart(id)
             ? <ItemCount onAdd={handleOnAdd} stock={stock}/>
             : <Link to='/cart'>Finalizar Compra</Link>
-          }
-          
+          } */}
+           <ItemCount onAdd={handleOnAdd} stock={stock}/>
           </div>
         </div>
     </div>

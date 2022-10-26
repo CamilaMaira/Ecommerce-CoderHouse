@@ -43,7 +43,7 @@ const Navbar = () => {
                 <Link key={cat.id} to={`/category/${cat.slug}`}> {cat.label} </Link>
               )})
             }            
-            <Link to={'/category/libros'}>Libros</Link>
+            {/* <Link to={'/category/libros'}>Libros</Link> */}
             <Link to ='/contacto'>Contacto</Link>
           </div>
             <CartWidget className="cart-widget" />

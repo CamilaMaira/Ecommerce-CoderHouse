@@ -23,8 +23,9 @@ export const CartProvider = ({ children }) => {
   }, [cart]) //eslint-disable-line
 
 
-  const addItem = (productToAdd) => {
+  const addItem = (productToAdd, quantity) => {
     if(!isInCart(productToAdd.id)) {
+      productToAdd.quantity = quantity
         setCart([...cart, productToAdd])
     } else {
         console.log('ya esta agregado')
@@ -63,7 +64,7 @@ const getTotal = () => {
   }
 
   return(
-    <CartContext.Provider value={{ cart, addItem, removeItem, isInCart, total, totalQuantity}}>
+    <CartContext.Provider value={{ cart, addItem, removeItem, isInCart, total, totalQuantity, clear}}>
       {children}
     </CartContext.Provider>  
     )
