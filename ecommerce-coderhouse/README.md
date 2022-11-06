@@ -7,17 +7,20 @@ Utiliza React, HTML5, CSS y Firebase.
 
 - Clona este proyecto
 - Una vez clonado, entra a la carpeta **"ecommerce-coderhouse"**
-- run ### `npm start`
+- run `npm start`
 - Abre Open [http://localhost:3000](http://localhost:3000) en tu browser de preferencia
 - Happy Hack!
 
-##  02. Para ver en tu browser
+##  02. Para ver en tu compu
 
-Link de deploy: 
+Link de deploy: https://ecommercecoder-nine.vercel.app/
 
 ##  03. Demostración
 
+https://www.loom.com/share/edb433a12a0e4846afc7bf05b1927500
 
 
-Este proyecto fue desarrollado por **Camila Maira**
+
+
+Este proyecto fue desarrollado por **Camila Maira** durante la primavera del 2022 en Santiago de Chile.
 
