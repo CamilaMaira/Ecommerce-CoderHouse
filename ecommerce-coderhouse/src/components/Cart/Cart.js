@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { Link } from "react-router-dom"
 import { CartContext } from "../../context/CartContext"
 import "./Cart.css"
+import Delete from '@mui/icons-material/DeleteOutlined'
 
 const Cart = () => {
   const { cart, removeItem, total, clear } = useContext(CartContext)
@@ -23,7 +24,7 @@ const Cart = () => {
                     <h4>{prod.quantity}</h4>
                   </div>
                   <div>
-                    <button className="eliminar-button" onClick={() => removeItem(prod.id)}>Eliminar</button>
+                    <button className="eliminar-button" onClick={() => removeItem(prod.id)}><Delete /></button>
                   </div>
               </div> 
           </div>
