@@ -27,8 +27,19 @@ export const CartProvider = ({ children }) => {
     if(!isInCart(productToAdd.id)) {
       productToAdd.quantity = quantity
         setCart([...cart, productToAdd])
-    } else {
-        console.log('ya esta agregado')
+    } else { //eslint-disable-next-line
+        const CartUptaded = cart.map(prod => { 
+          if(prod.id === productToAdd.id) {
+            const productUptaded = {
+              ...prod,
+              quantity: quantity
+            }
+            return productUptaded
+          } else {
+            return prod
+          }
+        })
+        setCart(CartUptaded)
     }
   }
 
@@ -58,13 +69,17 @@ const getTotal = () => {
     return accu
 }
 
-
   const clear = () => {
     setCart([])
   }
 
+  const getProductQuantity = (id) => {
+    const product = cart.find(prod => prod.id === id)
+    return product?.quantity
+  }
+
   return(
-    <CartContext.Provider value={{ cart, addItem, removeItem, isInCart, total, totalQuantity, clear}}>
+    <CartContext.Provider value={{ cart, addItem, removeItem, isInCart, total, totalQuantity, clear, getProductQuantity}}>
       {children}
     </CartContext.Provider>  
     )

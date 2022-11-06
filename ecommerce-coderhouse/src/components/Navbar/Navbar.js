@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Navbar.css';
 import logo from "./assets/img/logo.png";
 import CartWidget from '../CartWidget/CartWidget'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { getDocs, collection, orderBy, query } from 'firebase/firestore'
 import { db } from '../../services/firebase';
 
@@ -13,7 +13,6 @@ const Navbar = () => {
     const collectionRef = query(collection(db, 'categories'), orderBy('order'))
 
     getDocs(collectionRef).then(response => {
-      console.log(response)
       const categoriesAdapted = response.docs.map(doc => {
         const data = doc.data()
         const id = doc.id
