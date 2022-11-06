@@ -1,5 +1,6 @@
 .itemdetail-container {
   display: flex;
+  margin-bottom: 50px;
 }
 
 .content {
@@ -29,6 +30,7 @@
 
 .itemdetail-price {
   font-size: 14px;
+  font-weight: 500;
   text-align: left;
   margin-top: 15px;
   margin-bottom: 30px;
@@ -48,11 +50,11 @@
 .add-button:hover{
   background-color: black;
   color: white;
+  border-radius: 5px;
 }
 
 .volver-button{
   font-size: 12px;
-  font-weight: 500;
   background: none;
   text-decoration: underline;
   border: 0;
@@ -62,4 +64,17 @@
 
 .volver-button:hover{
   font-weight: bold;
+}
+
+.end-button{
+  padding: 8px 66px 8px 66px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.end-button:hover{
+  background-color: rgb(45, 182, 45);
+  border-radius: 5px;
 }

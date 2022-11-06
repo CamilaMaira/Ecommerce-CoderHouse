@@ -1,5 +1,6 @@
 //import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { createContext, useState } from 'react'
+import "./Form.css"
 
 export const CheckoutForm = createContext({
   name:"",
@@ -32,15 +33,15 @@ const submit = (e) => {
 
   return (
     <div>
-      <form>
-        <input  value={name} onChange={(e) => setName(e.target.value)} type="text" pattern="[a-zA-Z ]{1,35}"   className="form-input"   placeholder="Nombre" required />
+      <form className="main-form">
+        <input value={name} onChange={(e) => setName(e.target.value)} type="text" pattern="[a-zA-Z ]{1,35}"   className="form-input"   placeholder="Nombre" required />
         <input value={email} onChange={(e) => setEmail(e.target.value)} type="email"  className="form-input"   placeholder="Email" required/>
         <input value={phone}onChange={(e) => setPhone(e.target.value)} type="number" className="form-input"   placeholder="Teléfono"required />
         <input value={address}onChange={(e) => setAddress(e.target.value)}type="text"   className="form-input"   placeholder="Dirección"required />
       </form>
 
       <div>
-        <button onClick={submit}>Submit Información</button>
+        <button className="submit-button" onClick={submit}>Registrar Compra</button>
       </div>
     </div>
   )

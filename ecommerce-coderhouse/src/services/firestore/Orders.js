@@ -2,7 +2,6 @@ import { CartContext } from "../../context/CartContext"
 import { addDoc, collection, getDocs, query, where, documentId, writeBatch } from "firebase/firestore"
 import { db } from "../../services/firebase/index"
 import { useContext } from 'react'
-import { useNavigate } from "react-router-dom"
 
 export const ordersFirestore = () => {
 
@@ -10,8 +9,6 @@ export const ordersFirestore = () => {
   const { cart, total } = useContext(CartContext)
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  //const navigate = useNavigate()
-
   const createOrder = async (datos) => {
     try {
       const objOrder = {
@@ -64,6 +61,3 @@ export const ordersFirestore = () => {
   }
   
 }
-
-
-

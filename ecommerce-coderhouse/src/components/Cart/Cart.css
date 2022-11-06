@@ -71,9 +71,18 @@ button {
   cursor: pointer;
 }
 
+.checkout-button:hover{
+  border-radius: 5px;
+  font-weight: bold;
+}
+
 .clear-cart{
   margin-top: 20px;
   font-size: 13px;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.clear-cart:hover{
+  font-weight: 500;
 }
