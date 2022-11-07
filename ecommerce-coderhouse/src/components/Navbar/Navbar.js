@@ -3,7 +3,7 @@ import './Navbar.css';
 import logo from "./assets/img/logo.png";
 import CartWidget from '../CartWidget/CartWidget'
 import { Link } from 'react-router-dom'
-import { getDocs, collection, orderBy, query } from 'Firebase/Firestore'
+import { getDocs, collection, orderBy, query } from 'firebase/firestore'
 import { db } from '../../services/firebase';
 
 const Navbar = () => {
